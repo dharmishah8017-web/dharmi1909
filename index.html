@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="calculator" role="application" aria-label="Scientific calculator">
+    <header class="calc-header">
+      <div class="mode">
+        <button id="degRadBtn" class="small">DEG</button>
+        <div class="memory-indicator" id="memIndicator" title="Memory">M</div>
+      </div>
+      <h1 class="title">Scientific Calculator</h1>
+    </header>
+
+    <section class="display-area">
+      <div class="history" id="history" aria-live="polite"></div>
+      <output class="display" id="display" role="textbox" aria-label="Calculator display">0</output>
+    </section>
+
+    <section class="buttons">
+      <!-- Row 1 -->
+      <button class="fun" data-fn="mc">MC</button>
+      <button class="fun" data-fn="mr">MR</button>
+      <button class="fun" data-fn="mplus">M+</button>
+      <button class="fun" data-fn="mminus">M-</button>
+      <button class="fun" data-action="clear">C</button>
+      <button class="fun" data-action="del">DEL</button>
+
+      <!-- Row 2 -->
+      <button class="op" data-insert="(">(</button>
+      <button class="op" data-insert=")">)</button>
+      <button class="op" data-insert="^">x^y</button>
+      <button class="op" data-fn="sqrt">√</button>
+      <button class="op" data-fn="fact">n!</button>
+      <button class="op" data-fn="percent">%</button>
+
+      <!-- Row 3 -->
+      <button class="fn" data-fn="sin">sin</button>
+      <button class="fn" data-fn="cos">cos</button>
+      <button class="fn" data-fn="tan">tan</button>
+      <button class="fn" data-fn="asin">asin</button>
+      <button class="fn" data-fn="acos">acos</button>
+      <button class="fn" data-fn="atan">atan</button>
+
+      <!-- Row 4 -->
+      <button class="fn" data-fn="ln">ln</button>
+      <button class="fn" data-fn="log">log</button>
+      <button class="fn" data-fn="exp">exp</button>
+      <button class="fn" data-fn="pow2">x²</button>
+      <button class="fn" data-fn="pow3">x³</button>
+      <button class="const" data-insert="pi">π</button>
+
+      <!-- Row 5 -->
+      <button class="num" data-insert="7">7</button>
+      <button class="num" data-insert="8">8</button>
+      <button class="num" data-insert="9">9</button>
+      <button class="op" data-insert="/">÷</button>
+      <button class="op" data-insert="*">×</button>
+      <button class="special" data-action="neg">±</button>
+
+      <!-- Row 6 -->
+      <button class="num" data-insert="4">4</button>
+      <button class="num" data-insert="5">5</button>
+      <button class="num" data-insert="6">6</button>
+      <button class="op" data-insert="-">−</button>
+      <button class="op" data-insert="+">+</button>
+      <button class="num" data-insert="." aria-label="decimal">.</button>
+
+      <!-- Row 7 -->
+      <button class="num" data-insert="1">1</button>
+      <button class="num" data-insert="2">2</button>
+      <button class="num" data-insert="3">3</button>
+      <button class="num zero" data-insert="0">0</button>
+      <button class="ans" data-action="equals">=</button>
+    </section>
+
+    <footer class="credits">
+      <small>Tip: Use keyboard. Enter = evaluate, Backspace delete, Esc clear.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
